@@ -1,0 +1,20 @@
+<%- include("partials/header") -%>
+<div class="container-fluid">
+  <h1>FORM BUKA JASA TITIP</h1>
+  <hr />
+  <form class="" action="/formjastip" method="post" onsubmit="return confirm('Do you really want to submit the form?');">
+    <div class="form-group">
+      <label>Nama Toko</label>
+      <input class="form-control" type="text" name="postNamaToko" placeholder="Ketik di sini" />
+      <label>Tanggal</label>
+      <input class="form-control" type="text" name="postTanggal" placeholder="Ketik di sini" />
+      <label>Pukul (WIB)</label>
+      <input class="form-control" type="text" name="postPukul" placeholder="Ketik di sini" />
+      <label>Tujuan</label>
+      <textarea class="form-control" type="text" name="postTujuan" placeholder="Ketik di sini"></textarea>
+      <label>Link Google Form</label>
+      <input class="form-control" type="text" name="postLink" placeholder="Ketik di sini" />
+    </div>
+    <button type="submit" name="button">Kirim</button>
+  </form>
+</div>

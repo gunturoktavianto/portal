@@ -1,0 +1,16 @@
+<%- include("partials/header") -%>
+<a href="/formjastip">FORM JASTIP</a>
+
+<div class="d-flex flex-row container-fluid">
+  <% arrPostJasaTitip.forEach(function(postJasaTitip) { %>
+  <div class="card border-primary mb-3" style="max-width: 18rem">
+    <div class="card-header"><%=postJasaTitip.namaToko%></div>
+    <div class="card-body text-primary">
+      <h5 class="card-title">Primary card title</h5>
+      <a class="card-text" href="<%= postJasaTitip.link%>">LINK</a>
+
+    </div>
+  </div>
+
+  <%})%>
+</div>
