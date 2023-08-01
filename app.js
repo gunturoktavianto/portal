@@ -6,13 +6,18 @@ const ejs = require("ejs");
 
 const app = express();
 
+// kalau ada waktu, coba mongodb, import mongoose
 let arrPostJasaTitip = [];
 
 app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+// request response using json format
+app.use(express.json());
 
+// Routing: kalau ada waktu, try separating router and controller functions
+// -> more easy dev & scalable features
 app.get("/", function (req, res) {
   res.render("home");
 });

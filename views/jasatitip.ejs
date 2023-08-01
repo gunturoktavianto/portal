@@ -1,16 +1,33 @@
 <%- include("partials/header") -%>
-<a href="/formjastip">FORM JASTIP</a>
 
-<div class="d-flex flex-row container-fluid">
-  <% arrPostJasaTitip.forEach(function(postJasaTitip) { %>
-  <div class="card border-primary mb-3" style="max-width: 18rem">
-    <div class="card-header"><%=postJasaTitip.namaToko%></div>
-    <div class="card-body text-primary">
-      <h5 class="card-title">Primary card title</h5>
-      <a class="card-text" href="<%= postJasaTitip.link%>">LINK</a>
+<body class="bg-green">
 
+  <div class="container bg-green mt-5">
+
+    <h2 class="color-yellow">JASA TITIP</h2>
+    <a href="/formjastip" class="btn btn-lg bg-yellow color-green fw-bolder home-button ">+ Buka jastip baru</a>
+    <hr class="color-yellow" />
+
+    <!-- Form: query param searching by nama toko, live-rendering GET request + GET All by params, or submit first -->
+    <input class="form-control mb-3" type="text" name="postNamaToko" placeholder="Ketik nama toko di sini" />
+  
+    <div class="d-flex flex-row container-fluid">
+      <% arrPostJasaTitip.forEach(function(postJasaTitip) { %>
+      <div class="card border-primary mb-3" style="max-width: 18rem">
+        <div class="fw-bold color-green bg-yellow card-header"><%=postJasaTitip.namaToko%></div>
+        <div class="card-body text-primary">
+          <h5 class="card-title">Primary card title</h5>
+          <h5 class="card-text"> <% Waktu: postJasaTitip.waktu %> </h5>
+          <h5 class="card-text"> <% Tanggal: postJasaTitip.tanggal %> </h5>
+          <h5 class="card-text"> <% Tujuan: postJasaTitip.tujuan %> </h5>
+          <a class="card-text" href="<%= postJasaTitip.link%>">LINK</a>
+  
+        </div>
+      </div>
+  
+      <%})%>
     </div>
+  
   </div>
 
-  <%})%>
-</div>
+</body>
