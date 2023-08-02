@@ -1,20 +1,26 @@
 <%- include("partials/header") -%>
-<div class="container-fluid">
-  <h1>FORM BUKA JASA TITIP</h1>
-  <hr />
-  <form class="" action="/formjastip" method="post" onsubmit="return confirm('Do you really want to submit the form?');">
-    <div class="form-group">
-      <label>Nama Toko</label>
-      <input class="form-control" type="text" name="postNamaToko" placeholder="Ketik di sini" />
-      <label>Tanggal</label>
-      <input class="form-control" type="text" name="postTanggal" placeholder="Ketik di sini" />
-      <label>Pukul (WIB)</label>
-      <input class="form-control" type="text" name="postPukul" placeholder="Ketik di sini" />
-      <label>Tujuan</label>
-      <textarea class="form-control" type="text" name="postTujuan" placeholder="Ketik di sini"></textarea>
-      <label>Link Google Form</label>
-      <input class="form-control" type="text" name="postLink" placeholder="Ketik di sini" />
-    </div>
-    <button type="submit" name="button">Kirim</button>
-  </form>
-</div>
+
+<body class="bg-green">
+
+  <div class="container-fluid bg-green mt-5">
+    <h3 class="color-yellow">FORM BUKA JASA TITIP</h3>
+    <hr class="color-yellow" />
+    <form class="" action="/formjastip" method="post" onsubmit="return confirm('Do you really want to submit the form?');">
+      <div class="form-group">
+        <label class="color-yellow">Nama Toko</label>
+        <input class="form-control" type="text" name="postNamaToko" placeholder="Ketik nama toko yang akan kamu kunjungi (Contoh: Borma Dago)" />
+        <label class="color-yellow">Tanggal</label>
+        <input class="form-control" type="text" name="postTanggal" placeholder="Ketik tanggal kunjungan kamu di toko tersebut (Contoh: 29 Februari 2023)" />
+        <label class="color-yellow">Pukul (WIB)</label>
+        <input class="form-control" type="text" name="postPukul" placeholder="Ketik waktu yang akan kamu habiskan di toko yang akan kamu kunjungi (Contoh: 17.00-18.00 WIB)" />
+        <label class="color-yellow">Tujuan</label>
+        <textarea class="form-control" type="text" name="postTujuan" placeholder="Ketik daerah tujuan kamu (Contoh: Cisitu Baru X)"></textarea>
+        <label class="color-yellow">Link Google Form</label>
+        <input class="form-control" type="text" name="postLink" placeholder="Ketik link gform yang sudah kamu buat untuk diisi oleh pengguna jasa kamu" />
+      </div>
+      <button type="submit" name="button" class="btn btn-lg bg-yellow color-green fw-bolder home-button mt-4">Kirim</button>
+    </form>
+  </div>
+
+</body>
+
