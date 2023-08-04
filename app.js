@@ -30,11 +30,11 @@ app.get("/about", function (req, res) {
   res.render("about");
 });
 
-app.get("/formjastip", function (req, res) {
+app.get("/form-jastip", function (req, res) {
   res.render("formjastip");
 });
 
-app.post("/formjastip", function (req, res) {
+app.post("/form-jastip", function (req, res) {
   const postJasaTitip = {
     namaToko: req.body.postNamaToko,
     tanggal: req.body.postTanggal,
@@ -44,10 +44,10 @@ app.post("/formjastip", function (req, res) {
   };
 
   arrPostJasaTitip.push(postJasaTitip);
-  res.redirect("/jasatitip");
+  res.redirect("jasa-titip");
 });
 
-app.get("/jasatitip", function (req, res) {
+app.get("/jasa-titip", function (req, res) {
   res.render("jasatitip", { arrPostJasaTitip: arrPostJasaTitip });
 });
 

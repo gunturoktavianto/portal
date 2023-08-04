@@ -1,11 +1,46 @@
 <%- include("partials/header") -%>
+<body class="bg-green">
+  <div class="container">
+    <div class="col mt-5 text-center">
+      <img src="../img/icon-portal.png" alt="icon portal"/>
+    </div>
+    <h3 class="fw-bolder fs-1 color-yellow-light text-center">Pilih <span class="text-decoration-underline"><a href="/portal" class="color-yellow">PORTAL</a></span> yang kamu butuhkan</h3>
+    <div class="row text-center mt-3 ">
+      <div class="col-sm-6 mb-3 mb-sm-0 border-portal">
+        <div class="card border-portal p-4 bg-yellow-light color-green ">
+          <div class="card-body">
+            <h5 class="card-title fw-bold fs-2">JASA TITIP</h5>
+            <p class="card-text">Kamu bisa <span class="text-decoration-underline fw-bold">menyediakan</span> jasa titip atau 
+              <span class="text-decoration-underline fw-bold">menggunakan</span> jasa titip yang disediakan orang lain.</p>
+            <a href="/jasa-titip" class="btn bg-btn-portal color-yellow p-2 btn-portal">Cek Sekarang <img src="../img/arrow.png"/></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card border-portal p-4 bg-yellow-light color-green">
+          <div class="card-body">
+            <h5 class="card-title fw-bold fs-2">JASA ANTRE</h5>
+            <p class="card-text">Kamu bisa <span class="text-decoration-underline fw-bold">menyediakan</span> jasa antre atau 
+              <span class="text-decoration-underline fw-bold">menggunakan</span> jasa antre yang disediakan 
+              orang lain. </p>
+            <a href="/jasa-antre" class="btn bg-btn-portal color-yellow p-2 btn-portal">Cek Sekarang <img src="../img/arrow.png"/></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center my-3">
+      <div class="col align-self-center text-center">
+        <div class="card border-portal p-4 bg-yellow-light color-green">
+          <div class="card-body">
+            <h5 class="card-title fw-bold fs-2">KUY BARENG</h5>
+            <p class="card-text">Kamu bisa <span class="text-decoration-underline fw-bold">mencari teman</span> untuk diajak
+              melakukan kegiatan (mabar, hangout, seru-seruan) secara 
+              bersama-sama.</p>
+            <a href="/kuy-bareng" class="btn bg-btn-portal color-yellow p-2 btn-portal">Cek Sekarang <img src="../img/arrow.png"/></a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<h3 class="fw-bolder fs-1">Pilih <span class="text-decoration-underline"><a href="/portal" class="color-yellow">PORTAL</a></span> yang kamu butuhkan</h3>
-
-<div class="col">
-  <a href="/jasatitip">JASA TITIP</a>
-  <a href="/jasa-antre">JASA ANTRE</a> <!-- blum bikin ejs -->
-  <div class="row">
-    <a href="/kuy-bareng">KUY BARENG</a> <!-- blum bikin ejs -->
   </div>
-</div>
+</body>

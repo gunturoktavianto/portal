@@ -10,6 +10,10 @@
   color: #f1c93b !important;
 }
 
+.color-yellow-light{
+  color: #fae392;
+}
+
 .bg-yellow-light {
   background-color: #fae392;
 }
@@ -30,4 +34,32 @@
   border-radius: 10px;
   color: #1a5d1a !important;
   background-color: #f1c93b;
+}
+
+.thick-underline{
+  border: 2px solid #f1c93b !important;
+}
+
+.bg-home-span{
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.bg-home-span:hover{
+  background-color: #fae392;
+  
+}
+
+.border-portal{
+  border-radius: 50%;
+}
+
+.bg-btn-portal{
+  background-color: #1a5d1a;
+}
+
+.bg-btn-portal:hover{
+  
+  background-color: #749F82;
+  
 }
