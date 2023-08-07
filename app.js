@@ -8,6 +8,10 @@ const app = express();
 
 // kalau ada waktu, coba mongodb, import mongoose
 let arrPostJasaTitip = [];
+let arrPostJasaAntre = [];
+let arrPostKuyBareng = [];
+
+
 
 app.set("view engine", "ejs");
 
@@ -30,11 +34,19 @@ app.get("/about", function (req, res) {
   res.render("about");
 });
 
-app.get("/form-jastip", function (req, res) {
-  res.render("formjastip");
+app.get("/form-jasa-titip", function (req, res) {
+  res.render("formjasatitip");
 });
 
-app.post("/form-jastip", function (req, res) {
+app.get("/form-jasa-antre", function (req, res) {
+  res.render("formjasaantre");
+});
+
+app.get("/form-kuy-bareng", function (req, res) {
+  res.render("formkuybareng");
+});
+
+app.post("/form-jasa-titip", function (req, res) {
   const postJasaTitip = {
     namaToko: req.body.postNamaToko,
     tanggal: req.body.postTanggal,
@@ -47,8 +59,41 @@ app.post("/form-jastip", function (req, res) {
   res.redirect("jasa-titip");
 });
 
+app.post("/form-jasa-antre", function (req, res) {
+  const postJasaAntre = {
+    namaToko: req.body.postNamaToko,
+    tanggal: req.body.postTanggal,
+    waktu: req.body.postPukul,
+    link: req.body.postLink,
+  };
+
+  arrPostJasaAntre.push(postJasaAntre);
+  res.redirect("jasa-antre");
+});
+
+app.post("/form-kuy-bareng", function (req, res) {
+  const postKuyBareng = {
+    namaKegiatan: req.body.postNamaKegiatan,
+    tanggal: req.body.postTanggal,
+    waktu: req.body.postPukul,
+    lokasi: req.body.postLokasi,
+    link: req.body.postLink,
+  };
+
+  arrPostKuyBareng.push(postKuyBareng);
+  res.redirect("kuy-bareng");
+});
+
 app.get("/jasa-titip", function (req, res) {
   res.render("jasatitip", { arrPostJasaTitip: arrPostJasaTitip });
+});
+
+app.get("/jasa-antre", function (req, res) {
+  res.render("jasaantre", { arrPostJasaAntre: arrPostJasaAntre });
+});
+
+app.get("/kuy-bareng", function (req, res) {
+  res.render("kuybareng", { arrPostKuyBareng: arrPostKuyBareng });
 });
 
 app.listen(3000, function () {

@@ -1,0 +1,26 @@
+<%- include("partials/header") -%>
+
+<body class="bg-green">
+
+  <div class="container bg-green mt-5">
+    <h3 class="color-yellow fw-bold">FORM BUKA JASA TITIP</h3>
+    <div class="thick-underline mb-5"></div>
+    <form class="" action="/form-jasa-titip" method="post" onsubmit="return confirm('Do you really want to submit the form?');">
+      <div class="form-group">
+        <label class="color-yellow">Nama Toko</label>
+        <input class="form-control" type="text" required name="postNamaToko" onkeyup="this.value = this.value.toUpperCase();" placeholder="(Contoh: Borma Dago)" />
+        <label class="color-yellow">Tanggal</label>
+        <input class="form-control" type="text" required name="postTanggal" placeholder="(Contoh: 29 Februari 2023)" />
+        <label class="color-yellow">Pukul (WIB)</label>
+        <input class="form-control" type="text" required name="postPukul" placeholder="(Contoh: 17.00-18.00 WIB)" />
+        <label class="color-yellow">Tujuan</label>
+        <textarea class="form-control" type="text" required name="postTujuan" placeholder="(Contoh: Cisitu Baru X)"></textarea>
+        <label class="color-yellow">Link Google Form</label>
+        <input class="form-control" type="text"  required name="postLink" placeholder="Ketik link gform yang sudah kamu buat untuk diisi oleh pengguna jasa kamu" />
+      </div>
+      <button type="submit" name="button" class="btn btn-lg bg-yellow color-green fw-bolder home-button mt-4">Kirim</button>
+    </form>
+  </div>
+
+</body>
+

@@ -1,0 +1,31 @@
+<%- include("partials/header") -%>
+
+<body class="bg-green">
+
+  <div class="container bg-green mt-5">
+    <div class="d-flex">
+      <h2 class="color-yellow fw-bold">JASA ANTRE</h2>
+      <a href="/form-jasa-antre" class="btn btn-lg bg-yellow color-green fw-bolder home-button ms-auto ">+ Buka jasa antre baru</a>
+    </div>
+    <div class="thick-underline mt-3"></div>
+    <div class="container">
+      <% arrPostJasaAntre.forEach(function(postJasaAntre) { %>
+        <div class="card my-4">
+          <div class="fw-bold  fs-4 color-green bg-yellow card-header"><%=postJasaAntre.namaToko%></div>
+          <div class="card-body color-green bg-yellow-light">
+            <h5 class="card-text"> <span class="fw-bold">Tanggal: </span><%=postJasaAntre.tanggal %> </h5>
+            <h5 class="card-text"> <span class="fw-bold">Waktu (WIB): </span><%=postJasaAntre.waktu %> </h5>
+            <a class="btn fw-bold p-2 card-text btn-isi-gform" href="<%= postJasaAntre.link%>">ISI GFORM</a>
+          </div>
+        </div>
+      <%})%>
+    </div>
+    
+
+    
+   
+  
+  
+  </div>
+
+</body>

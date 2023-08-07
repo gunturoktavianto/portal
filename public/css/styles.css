@@ -30,7 +30,7 @@
   background-color: #fae392;
 }
 
-.nav-link:hover {
+.nav-link:hover{
   border-radius: 10px;
   color: #1a5d1a !important;
   background-color: #f1c93b;
@@ -62,4 +62,13 @@
   
   background-color: #749F82;
   
+}
+
+.btn-isi-gform{
+  background-color:#f1c93b ;
+  color:#1a5d1a
+}
+
+.btn-isi-gform:hover{
+  background-color: #FBD85D;
 }
